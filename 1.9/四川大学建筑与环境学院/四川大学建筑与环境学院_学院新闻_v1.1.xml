@@ -1,0 +1,238 @@
+<Root>
+  <Version>2.4.1.0</Version>
+  <CreateTime>2019-01-09 16:41:17</CreateTime>
+  <UpdateTime>2019-01-09 16:46:25</UpdateTime>
+  <UpdateMode>False</UpdateMode>
+  <CheckPageUrlRepeat>False</CheckPageUrlRepeat>
+  <NeedLogin>False</NeedLogin>
+  <MaxThreadNum>3</MaxThreadNum>
+  <RequestInterval>0</RequestInterval>
+  <UrlEncoding />
+  <Delimiter>,</Delimiter>
+  <RawCookies />
+  <Plugin />
+  <EnableDial>False</EnableDial>
+  <DialTarget />
+  <DialInterval>10</DialInterval>
+  <DialType>0</DialType>
+  <IsPost>False</IsPost>
+  <PostBody />
+  <AntiSpiderRule>
+    <UseAutoProxy>False</UseAutoProxy>
+    <AutoProxyIntervalTime>0</AutoProxyIntervalTime>
+    <ClearCookieWithProxy>False</ClearCookieWithProxy>
+    <UseRequestRetry>False</UseRequestRetry>
+    <RetryCount>0</RetryCount>
+    <RetryWaitTime>0</RetryWaitTime>
+    <RetryConditionType>0</RetryConditionType>
+    <RetryConditionValue />
+    <RequestRetryWithProxy>False</RequestRetryWithProxy>
+  </AntiSpiderRule>
+  <StopPagingNoRecordNum>5</StopPagingNoRecordNum>
+  <RunCommandsAtSplit>False</RunCommandsAtSplit>
+  <StartUrls>
+    <Url>http://acem.scu.edu.cn/news.php?cid=87</Url>
+  </StartUrls>
+  <BrowserSetting>
+    <UserAgent />
+    <DisablePrompt>True</DisablePrompt>
+    <DisableImg>False</DisableImg>
+    <DisableJS>False</DisableJS>
+    <DisableFlash>False</DisableFlash>
+    <AdBlock>True</AdBlock>
+    <ProxyPort>8888</ProxyPort>
+    <ProxyHost />
+  </BrowserSetting>
+  <Pages>
+    <Page>
+      <RowXPath>//div[@class='neirong']/div</RowXPath>
+      <NoScript>False</NoScript>
+      <EngineMode>1</EngineMode>
+      <RowMode>1</RowMode>
+      <TestUrl>http://acem.scu.edu.cn/news.php?cid=87</TestUrl>
+      <PaginationMode>0</PaginationMode>
+      <PaginationMaxNum>0</PaginationMaxNum>
+      <PaginationXPath />
+      <Fields>
+        <Field>
+          <Name>TITLE</Name>
+          <DefaultValue />
+          <Attribute>Text</Attribute>
+          <DefineValue />
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>True</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>True</NoEmpty>
+          <XPath>./span[1]/a[1]</XPath>
+          <XPath>.//span[@class='title2']/a[1]</XPath>
+          <ProcessList>
+            <Match Name="文本替换">
+              <Pattern>+</Pattern>
+              <Replacement />
+              <UseRegex>0</UseRegex>
+            </Match>
+          </ProcessList>
+        </Field>
+        <Field>
+          <Name>ORIGINAL_LINK</Name>
+          <DefaultValue />
+          <Attribute>href</Attribute>
+          <DefineValue />
+          <DeepIn>True</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+          <XPath>./span[1]/a[1]</XPath>
+          <XPath>.//span[@class='title2']/a[1]</XPath>
+        </Field>
+        <Field>
+          <Name>RELEASE_DATETIME</Name>
+          <DefaultValue />
+          <Attribute>Text</Attribute>
+          <DefineValue />
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+          <XPath>./span[2]</XPath>
+          <XPath>.//span[@class='time']</XPath>
+          <ProcessList>
+            <Match Name="文本替换">
+              <Pattern>时间：</Pattern>
+              <Replacement />
+              <UseRegex>0</UseRegex>
+            </Match>
+          </ProcessList>
+        </Field>
+        <Field>
+          <Name>ADD_TIME</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>#当前时间#</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SUBJECT_TYPE</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>22fe7d2225b64386a4c7578b752d8bd7</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SOURCE</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>四川大学建筑与环境学院</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SOURCE_REAL</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>四川大学建筑与环境学院</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SOURCE_MENU_LV1</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>环境科学与工程</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SOURCE_MENU_LV2</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>学院新闻</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>BZY_SCRIPT_VERSION</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>四川大学建筑与环境学院_学院新闻_v1.1</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+      </Fields>
+    </Page>
+    <Page>
+      <RowXPath />
+      <NoScript>False</NoScript>
+      <EngineMode>1</EngineMode>
+      <RowMode>0</RowMode>
+      <TestUrl>http://acem.scu.edu.cn/newsshow.php?cid=87&amp;id=12043</TestUrl>
+      <TestUrl>http://acem.scu.edu.cn/newsshow.php?cid=87&amp;id=12042</TestUrl>
+      <TestUrl>http://acem.scu.edu.cn/newsshow.php?cid=87&amp;id=12041</TestUrl>
+      <TestUrl>http://acem.scu.edu.cn/newsshow.php?cid=87&amp;id=12040</TestUrl>
+      <TestUrl>http://acem.scu.edu.cn/newsshow.php?cid=87&amp;id=12039</TestUrl>
+      <PaginationMode>0</PaginationMode>
+      <PaginationMaxNum>0</PaginationMaxNum>
+      <PaginationXPath />
+      <Fields>
+        <Field>
+          <Name>CONTENT</Name>
+          <DefaultValue />
+          <Attribute>InnerHTML</Attribute>
+          <DefineValue />
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+          <XPath>//*[@id="textarea"]</XPath>
+          <ProcessList>
+            <Match Name="文本替换">
+              <Pattern>"/uploads</Pattern>
+              <Replacement>"http://acem.scu.edu.cn/uploads</Replacement>
+              <UseRegex>0</UseRegex>
+            </Match>
+          </ProcessList>
+        </Field>
+        <Field>
+          <Name>NEWS_PICTURES</Name>
+          <DefaultValue />
+          <Attribute>InnerHTML</Attribute>
+          <DefineValue />
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+          <XPath>//*[@id="textarea"]</XPath>
+          <ProcessList>
+            <Match Name="文本替换">
+              <Pattern>"/uploads</Pattern>
+              <Replacement>"http://acem.scu.edu.cn/uploads</Replacement>
+              <UseRegex>0</UseRegex>
+            </Match>
+            <Match Name="正则匹配">
+              <Pattern>\bsrc\s*=\s*\"?(.*?)(\"|&gt;|\s+)</Pattern>
+              <CheckContent>False</CheckContent>
+              <Multiline>True</Multiline>
+              <Delimiter>;</Delimiter>
+            </Match>
+          </ProcessList>
+        </Field>
+      </Fields>
+    </Page>
+  </Pages>
+</Root>

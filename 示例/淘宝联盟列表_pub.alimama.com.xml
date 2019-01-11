@@ -1,0 +1,36 @@
+<Root>
+  <NeedLogin>False</NeedLogin>
+  <MaxThreadNum>3</MaxThreadNum>
+  <StartUrls>
+    <Url>http://pub.alimama.com/promo/search/index.htm?q=%E8%BF%90%E5%8A%A8%E7%9F%AD%E8%A3%A4</Url>
+  </StartUrls>
+  <BrowserSetting>
+    <DisablePrompt>True</DisablePrompt>
+    <DisableImg>True</DisableImg>
+    <DisableJS>False</DisableJS>
+    <DisableFlash>False</DisableFlash>
+    <AdBlock>True</AdBlock>
+    <ProxyPort>8088</ProxyPort>
+  </BrowserSetting>
+  <Pages>
+    <Page>
+      <RowXPath>//*[@id="J_search_results"]/div[1]/div</RowXPath>
+      <NoScript>False</NoScript>
+      <EngineMode>1</EngineMode>
+      <RowMode>1</RowMode>
+      <TestUrl>http://pub.alimama.com/promo/search/index.htm?q=%E8%BF%90%E5%8A%A8%E7%9F%AD%E8%A3%A4</TestUrl>
+      <PaginationMode>1</PaginationMode>
+      <PaginationMaxNum>-1</PaginationMaxNum>
+      <Fields>
+        <Field>
+          <Name>字段0</Name>
+          <Attribute>InnerText</Attribute>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <XPath>./div[2]/div[1]/p[1]</XPath>
+        </Field>
+      </Fields>
+    </Page>
+  </Pages>
+</Root>

@@ -1,0 +1,248 @@
+<Root>
+  <Version>2.4.1.0</Version>
+  <CreateTime>2019-01-08 04:31:38</CreateTime>
+  <UpdateTime>2019-01-08 12:38:34</UpdateTime>
+  <UpdateMode>False</UpdateMode>
+  <CheckPageUrlRepeat>False</CheckPageUrlRepeat>
+  <NeedLogin>False</NeedLogin>
+  <MaxThreadNum>3</MaxThreadNum>
+  <RequestInterval>0</RequestInterval>
+  <UrlEncoding />
+  <Delimiter>,</Delimiter>
+  <RawCookies />
+  <Plugin />
+  <EnableDial>False</EnableDial>
+  <DialTarget />
+  <DialInterval>10</DialInterval>
+  <DialType>0</DialType>
+  <IsPost>False</IsPost>
+  <PostBody />
+  <AntiSpiderRule>
+    <UseAutoProxy>False</UseAutoProxy>
+    <AutoProxyIntervalTime>0</AutoProxyIntervalTime>
+    <ClearCookieWithProxy>False</ClearCookieWithProxy>
+    <UseRequestRetry>False</UseRequestRetry>
+    <RetryCount>0</RetryCount>
+    <RetryWaitTime>0</RetryWaitTime>
+    <RetryConditionType>0</RetryConditionType>
+    <RetryConditionValue />
+    <RequestRetryWithProxy>False</RequestRetryWithProxy>
+  </AntiSpiderRule>
+  <StopPagingNoRecordNum>5</StopPagingNoRecordNum>
+  <RunCommandsAtSplit>False</RunCommandsAtSplit>
+  <StartUrls>
+    <Url>http://sese.nuist.edu.cn/Showxsdt.aspx?CI=12</Url>
+  </StartUrls>
+  <BrowserSetting>
+    <UserAgent />
+    <DisablePrompt>True</DisablePrompt>
+    <DisableImg>False</DisableImg>
+    <DisableJS>False</DisableJS>
+    <DisableFlash>False</DisableFlash>
+    <AdBlock>True</AdBlock>
+    <ProxyPort>8888</ProxyPort>
+    <ProxyHost />
+  </BrowserSetting>
+  <Pages>
+    <Page>
+      <RowXPath>//*[@id="ctl00_ctl00_mainbody_rightbody_listcontent_NewsList"]/tbody[1]/tr[contains(@class,'gridline')]</RowXPath>
+      <NoScript>False</NoScript>
+      <EngineMode>1</EngineMode>
+      <RowMode>1</RowMode>
+      <TestUrl>http://sese.nuist.edu.cn/Showxwkx.aspx?CI=10</TestUrl>
+      <TestUrl>http://sese.nuist.edu.cn/Showxsdt.aspx?CI=12</TestUrl>
+      <PaginationMode>0</PaginationMode>
+      <PaginationMaxNum>0</PaginationMaxNum>
+      <PaginationXPath />
+      <Fields>
+        <Field>
+          <Name>TITLE</Name>
+          <DefaultValue />
+          <Attribute>Text</Attribute>
+          <DefineValue />
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>True</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>True</NoEmpty>
+          <XPath>./td[1]/div[1]/a[2]</XPath>
+          <XPath>.//a[@class='Title']</XPath>
+        </Field>
+        <Field>
+          <Name>ORIGINAL_LINK</Name>
+          <DefaultValue />
+          <Attribute>href</Attribute>
+          <DefineValue />
+          <DeepIn>True</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+          <XPath>./td[1]/div[1]/a[2]</XPath>
+          <XPath>.//a[@class='Title']</XPath>
+        </Field>
+        <Field>
+          <Name>RELEASE_DATETIME</Name>
+          <DefaultValue />
+          <Attribute>Text</Attribute>
+          <DefineValue />
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+          <XPath>./td[2]</XPath>
+          <XPath>.//td[@class='gridlinedate']</XPath>
+          <ProcessList>
+            <Match Name="文本替换">
+              <Pattern>年</Pattern>
+              <Replacement>-</Replacement>
+              <UseRegex>0</UseRegex>
+            </Match>
+            <Match Name="文本替换">
+              <Pattern>月</Pattern>
+              <Replacement>-</Replacement>
+              <UseRegex>0</UseRegex>
+            </Match>
+            <Match Name="文本替换">
+              <Pattern>日</Pattern>
+              <Replacement />
+              <UseRegex>0</UseRegex>
+            </Match>
+          </ProcessList>
+        </Field>
+        <Field>
+          <Name>ADD_TIME</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>#当前时间#</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SUBJECT_TYPE</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>22fe7d2225b64386a4c7578b752d8bd7</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SOURCE</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>南京信息工程大学环境科学与工程学院</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SOURCE_REAL</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>南京信息工程大学环境科学与工程学院</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SOURCE_MENU_LV1</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>环境科学与工程</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SOURCE_MENU_LV2</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>学术动态</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>BZY_SCRIPT_VERSION</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>南京信息工程大学环境科学与工程学院_学术动态_v1.1</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+      </Fields>
+    </Page>
+    <Page>
+      <RowXPath />
+      <NoScript>False</NoScript>
+      <EngineMode>1</EngineMode>
+      <RowMode>0</RowMode>
+      <TestUrl>http://sese.nuist.edu.cn/Class.aspx?AI=1851</TestUrl>
+      <TestUrl>http://sese.nuist.edu.cn/Class.aspx?AI=1854</TestUrl>
+      <TestUrl>http://sese.nuist.edu.cn/Class.aspx?AI=1860</TestUrl>
+      <TestUrl>http://sese.nuist.edu.cn/Class.aspx?AI=1810</TestUrl>
+      <TestUrl>http://sese.nuist.edu.cn/Class.aspx?AI=1842</TestUrl>
+      <PaginationMode>0</PaginationMode>
+      <PaginationMaxNum>0</PaginationMaxNum>
+      <PaginationXPath />
+      <Fields>
+        <Field>
+          <Name>CONTENT</Name>
+          <DefaultValue />
+          <Attribute>InnerHTML</Attribute>
+          <DefineValue />
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+          <XPath>//*[@id="ctl00_ctl00_mainbody_rightbody_listcontent_lmnr"]/div[4]</XPath>
+          <ProcessList>
+            <Match Name="文本替换">
+              <Pattern>"/upload</Pattern>
+              <Replacement>"http://sese.nuist.edu.cn/upload</Replacement>
+              <UseRegex>0</UseRegex>
+            </Match>
+          </ProcessList>
+        </Field>
+        <Field>
+          <Name>NEWS_PICTURES</Name>
+          <DefaultValue />
+          <Attribute>InnerHTML</Attribute>
+          <DefineValue />
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+          <XPath>//*[@id="ctl00_ctl00_mainbody_rightbody_listcontent_lmnr"]/div[4]</XPath>
+          <ProcessList>
+            <Match Name="文本替换">
+              <Pattern>"/upload</Pattern>
+              <Replacement>"http://sese.nuist.edu.cn/upload</Replacement>
+              <UseRegex>0</UseRegex>
+            </Match>
+            <Match Name="正则匹配">
+              <Pattern>&lt;img[^&gt;]*&gt;</Pattern>
+              <CheckContent>False</CheckContent>
+              <Multiline>True</Multiline>
+              <Delimiter>;</Delimiter>
+            </Match>
+            <Match Name="正则匹配">
+              <Pattern>((http:|https:).*?(jpg|gif|png|bmp))</Pattern>
+              <CheckContent>False</CheckContent>
+              <Multiline>True</Multiline>
+              <Delimiter>;</Delimiter>
+            </Match>
+          </ProcessList>
+        </Field>
+      </Fields>
+    </Page>
+  </Pages>
+</Root>

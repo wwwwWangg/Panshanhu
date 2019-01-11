@@ -1,0 +1,241 @@
+<Root>
+  <Version>2.4.1.0</Version>
+  <CreateTime>2019-01-02 16:45:26</CreateTime>
+  <UpdateTime>2019-01-10 10:21:29</UpdateTime>
+  <UpdateMode>False</UpdateMode>
+  <CheckPageUrlRepeat>False</CheckPageUrlRepeat>
+  <NeedLogin>False</NeedLogin>
+  <MaxThreadNum>3</MaxThreadNum>
+  <RequestInterval>0</RequestInterval>
+  <UrlEncoding />
+  <Delimiter>,</Delimiter>
+  <RawCookies />
+  <Plugin />
+  <EnableDial>False</EnableDial>
+  <DialTarget />
+  <DialInterval>10</DialInterval>
+  <DialType>0</DialType>
+  <IsPost>False</IsPost>
+  <PostBody />
+  <AntiSpiderRule>
+    <UseAutoProxy>False</UseAutoProxy>
+    <AutoProxyIntervalTime>0</AutoProxyIntervalTime>
+    <ClearCookieWithProxy>False</ClearCookieWithProxy>
+    <UseRequestRetry>False</UseRequestRetry>
+    <RetryCount>0</RetryCount>
+    <RetryWaitTime>0</RetryWaitTime>
+    <RetryConditionType>0</RetryConditionType>
+    <RetryConditionValue />
+    <RequestRetryWithProxy>False</RequestRetryWithProxy>
+  </AntiSpiderRule>
+  <StopPagingNoRecordNum>5</StopPagingNoRecordNum>
+  <RunCommandsAtSplit>False</RunCommandsAtSplit>
+  <StartUrls>
+    <Url>http://edu.chinaartedu.net/artedu/dance/</Url>
+  </StartUrls>
+  <BrowserSetting>
+    <UserAgent />
+    <DisablePrompt>True</DisablePrompt>
+    <DisableImg>False</DisableImg>
+    <DisableJS>False</DisableJS>
+    <DisableFlash>False</DisableFlash>
+    <AdBlock>True</AdBlock>
+    <ProxyPort>8888</ProxyPort>
+    <ProxyHost />
+  </BrowserSetting>
+  <Pages>
+    <Page>
+      <RowXPath>//div[@class='bm_c xld']/dl[contains(@class,'bbda')][contains(@class,'cl')]</RowXPath>
+      <NoScript>False</NoScript>
+      <EngineMode>1</EngineMode>
+      <RowMode>1</RowMode>
+      <TestUrl>http://edu.chinaartedu.net/artedu/finearts/</TestUrl>
+      <TestUrl>http://edu.chinaartedu.net/artedu/quyi/</TestUrl>
+      <TestUrl>http://edu.chinaartedu.net/artedu/qiyue/</TestUrl>
+      <TestUrl>http://edu.chinaartedu.net/artedu/vocality/</TestUrl>
+      <TestUrl>http://edu.chinaartedu.net/artedu/dance/</TestUrl>
+      <PaginationMode>0</PaginationMode>
+      <PaginationMaxNum>0</PaginationMaxNum>
+      <PaginationXPath />
+      <Fields>
+        <Field>
+          <Name>TITLE</Name>
+          <DefaultValue />
+          <Attribute>Text</Attribute>
+          <DefineValue />
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>True</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>True</NoEmpty>
+          <XPath>./dt[1]/a[1]</XPath>
+        </Field>
+        <Field>
+          <Name>ORIGINAL_LINK</Name>
+          <DefaultValue />
+          <Attribute>href</Attribute>
+          <DefineValue />
+          <DeepIn>True</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+          <XPath>./dt[1]/a[1]</XPath>
+        </Field>
+        <Field>
+          <Name>RELEASE_DATETIME</Name>
+          <DefaultValue />
+          <Attribute>Text</Attribute>
+          <DefineValue />
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+          <XPath>./dd[not(@class)]/span[@class='xg1']</XPath>
+          <XPath>.//span[@class='xg1']</XPath>
+          <ProcessList>
+            <Match Name="字符转码">
+              <TransformType>9</TransformType>
+              <Encoding>UTF-8</Encoding>
+              <DateFormate>yyyy-MM-dd</DateFormate>
+            </Match>
+          </ProcessList>
+        </Field>
+        <Field>
+          <Name>ADD_TIME</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>#当前时间#</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SUBJECT_TYPE</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>f203f0b9683c446e9199518ef486d018</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SOURCE</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>中国艺术教育网艺术教育</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SOURCE_REAL</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>中国艺术教育网艺术教育</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SOURCE_MENU_LV1</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>教育学</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SOURCE_MENU_LV2</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>舞蹈</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>BZY_SCRIPT_VERSION</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>中国艺术教育网艺术教育_舞蹈_v1.1</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+          <XPath>./dt[1]/a[1]</XPath>
+        </Field>
+      </Fields>
+    </Page>
+    <Page>
+      <RowXPath />
+      <NoScript>False</NoScript>
+      <EngineMode>1</EngineMode>
+      <RowMode>0</RowMode>
+      <TestUrl>http://www.chinaartedu.net/1a40857/</TestUrl>
+      <TestUrl>http://www.chinaartedu.net/1a40834/</TestUrl>
+      <TestUrl>http://www.chinaartedu.net/1a40568/</TestUrl>
+      <TestUrl>http://www.chinaartedu.net/1a40468/</TestUrl>
+      <TestUrl>http://www.chinaartedu.net/1a40409/</TestUrl>
+      <TestUrl>http://www.chinaartedu.net/1a40432/</TestUrl>
+      <PaginationMode>0</PaginationMode>
+      <PaginationMaxNum>0</PaginationMaxNum>
+      <PaginationXPath />
+      <Fields>
+        <Field>
+          <Name>CONTENT</Name>
+          <DefaultValue />
+          <Attribute>InnerHTML</Attribute>
+          <DefineValue />
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+          <XPath>//*[@id="vmain"]/div[1]/div[2]/ul[@class="zw"]</XPath>
+          <ProcessList>
+            <Match Name="文本替换">
+              <Pattern>"data/</Pattern>
+              <Replacement>"http://www.chinaartedu.net/data/</Replacement>
+              <UseRegex>0</UseRegex>
+            </Match>
+          </ProcessList>
+        </Field>
+        <Field>
+          <Name>NEWS_PICTURES</Name>
+          <DefaultValue />
+          <Attribute>InnerHTML</Attribute>
+          <DefineValue />
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+          <XPath>//*[@id="vmain"]/div[1]/div[2]/ul[@class="zw"]</XPath>
+          <ProcessList>
+            <Match Name="文本替换">
+              <Pattern>"data/</Pattern>
+              <Replacement>"http://www.chinaartedu.net/data/</Replacement>
+              <UseRegex>0</UseRegex>
+            </Match>
+            <Match Name="正则匹配">
+              <Pattern>&lt;img[^&gt;]*&gt;</Pattern>
+              <CheckContent>False</CheckContent>
+              <Multiline>True</Multiline>
+              <Delimiter>;</Delimiter>
+            </Match>
+            <Match Name="正则匹配">
+              <Pattern>((http:|https:).*?(jpg|jpeg|gif|png|bmp))</Pattern>
+              <CheckContent>False</CheckContent>
+              <Multiline>True</Multiline>
+              <Delimiter>;</Delimiter>
+            </Match>
+          </ProcessList>
+        </Field>
+      </Fields>
+    </Page>
+  </Pages>
+</Root>

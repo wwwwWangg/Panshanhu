@@ -1,0 +1,209 @@
+<Root>
+  <Version>2.4.1.0</Version>
+  <CreateTime>2019-01-04 11:48:57</CreateTime>
+  <UpdateTime>2019-01-04 11:48:57</UpdateTime>
+  <UpdateMode>False</UpdateMode>
+  <CheckPageUrlRepeat>False</CheckPageUrlRepeat>
+  <NeedLogin>False</NeedLogin>
+  <MaxThreadNum>3</MaxThreadNum>
+  <RequestInterval>0</RequestInterval>
+  <UrlEncoding />
+  <Delimiter>,</Delimiter>
+  <RawCookies />
+  <Plugin />
+  <EnableDial>False</EnableDial>
+  <DialTarget />
+  <DialInterval>10</DialInterval>
+  <DialType>0</DialType>
+  <IsPost>False</IsPost>
+  <PostBody />
+  <AntiSpiderRule>
+    <UseAutoProxy>False</UseAutoProxy>
+    <AutoProxyIntervalTime>0</AutoProxyIntervalTime>
+    <ClearCookieWithProxy>False</ClearCookieWithProxy>
+    <UseRequestRetry>False</UseRequestRetry>
+    <RetryCount>0</RetryCount>
+    <RetryWaitTime>0</RetryWaitTime>
+    <RetryConditionType>0</RetryConditionType>
+    <RetryConditionValue />
+    <RequestRetryWithProxy>False</RequestRetryWithProxy>
+  </AntiSpiderRule>
+  <StopPagingNoRecordNum>5</StopPagingNoRecordNum>
+  <RunCommandsAtSplit>False</RunCommandsAtSplit>
+  <StartUrls>
+    <Url>http://graduate.bnu.edu.cn/NewList.aspx</Url>
+  </StartUrls>
+  <BrowserSetting>
+    <UserAgent />
+    <DisablePrompt>True</DisablePrompt>
+    <DisableImg>False</DisableImg>
+    <DisableJS>False</DisableJS>
+    <DisableFlash>False</DisableFlash>
+    <AdBlock>True</AdBlock>
+    <ProxyPort>8888</ProxyPort>
+    <ProxyHost />
+  </BrowserSetting>
+  <Pages>
+    <Page>
+      <RowXPath>//*[@id="ctl00_ContentPlaceHolder1_gvNewsList"]/tbody[1]/tr</RowXPath>
+      <NoScript>False</NoScript>
+      <EngineMode>1</EngineMode>
+      <RowMode>1</RowMode>
+      <TestUrl>http://graduate.bnu.edu.cn/NewList.aspx</TestUrl>
+      <PaginationMode>0</PaginationMode>
+      <PaginationMaxNum>0</PaginationMaxNum>
+      <PaginationXPath />
+      <Fields>
+        <Field>
+          <Name>TITLE</Name>
+          <DefaultValue />
+          <Attribute>Text</Attribute>
+          <DefineValue />
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>True</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>True</NoEmpty>
+          <XPath>./td[1]/li[1]/a[1]</XPath>
+        </Field>
+        <Field>
+          <Name>ORIGINAL_LINK</Name>
+          <DefaultValue />
+          <Attribute>href</Attribute>
+          <DefineValue />
+          <DeepIn>True</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+          <XPath>./td[1]/li[1]/a[1]</XPath>
+        </Field>
+        <Field>
+          <Name>RELEASE_DATETIME</Name>
+          <DefaultValue />
+          <Attribute>Text</Attribute>
+          <DefineValue />
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+          <XPath>./td[1]/li[1]/span[1]</XPath>
+        </Field>
+        <Field>
+          <Name>ADD_TIME</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>#当前时间#</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SUBJECT_TYPE</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>f203f0b9683c446e9199518ef486d018</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SOURCE</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>北京大学研究生院</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SOURCE_REAL</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>北京大学研究生院</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SOURCE_MENU_LV1</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>教育学</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SOURCE_MENU_LV2</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>最新消息</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>BZY_SCRIPT_VERSION</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>北京大学研究生院_最新消息_v1.1</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+      </Fields>
+    </Page>
+    <Page>
+      <RowXPath />
+      <NoScript>False</NoScript>
+      <EngineMode>1</EngineMode>
+      <RowMode>0</RowMode>
+      <TestUrl>http://graduate.bnu.edu.cn/ReadNews.aspx?NewsId=190103043941</TestUrl>
+      <TestUrl>http://graduate.bnu.edu.cn/count.aspx?NewsId=190102043250&amp;type=2</TestUrl>
+      <TestUrl>http://graduate.bnu.edu.cn/ReadNews.aspx?NewsId=190102032016</TestUrl>
+      <TestUrl>http://graduate.bnu.edu.cn/ReadNews.aspx?NewsId=181229052214</TestUrl>
+      <TestUrl>http://graduate.bnu.edu.cn/count.aspx?NewsId=181229033134&amp;type=2</TestUrl>
+      <PaginationMode>0</PaginationMode>
+      <PaginationMaxNum>0</PaginationMaxNum>
+      <PaginationXPath />
+      <Fields>
+        <Field>
+          <Name>CONTENT</Name>
+          <DefaultValue />
+          <Attribute>InnerHTML</Attribute>
+          <DefineValue />
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+          <XPath>//*[@id="ctl00_ContentPlaceHolder1_DetailsView1_Label3"]</XPath>
+        </Field>
+        <Field>
+          <Name>NEWS_PICTURES</Name>
+          <DefaultValue />
+          <Attribute>InnerHTML</Attribute>
+          <DefineValue />
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+          <XPath>//*[@id="ctl00_ContentPlaceHolder1_DetailsView1_Label3"]</XPath>
+          <ProcessList>
+            <Match Name="正则匹配">
+              <Pattern>\bsrc\s*=\s*\"?(.*?)(\"|&gt;|\s+)</Pattern>
+              <CheckContent>False</CheckContent>
+              <Multiline>True</Multiline>
+              <Delimiter>;</Delimiter>
+            </Match>
+          </ProcessList>
+        </Field>
+      </Fields>
+    </Page>
+  </Pages>
+</Root>

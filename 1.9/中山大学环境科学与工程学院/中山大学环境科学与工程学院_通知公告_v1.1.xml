@@ -1,0 +1,209 @@
+<Root>
+  <Version>2.4.1.0</Version>
+  <CreateTime>2019-01-09 17:17:45</CreateTime>
+  <UpdateTime>2019-01-09 22:04:58</UpdateTime>
+  <UpdateMode>False</UpdateMode>
+  <CheckPageUrlRepeat>False</CheckPageUrlRepeat>
+  <NeedLogin>False</NeedLogin>
+  <MaxThreadNum>3</MaxThreadNum>
+  <RequestInterval>0</RequestInterval>
+  <UrlEncoding />
+  <Delimiter>,</Delimiter>
+  <RawCookies />
+  <Plugin />
+  <EnableDial>False</EnableDial>
+  <DialTarget />
+  <DialInterval>10</DialInterval>
+  <DialType>0</DialType>
+  <IsPost>False</IsPost>
+  <PostBody />
+  <AntiSpiderRule>
+    <UseAutoProxy>False</UseAutoProxy>
+    <AutoProxyIntervalTime>0</AutoProxyIntervalTime>
+    <ClearCookieWithProxy>False</ClearCookieWithProxy>
+    <UseRequestRetry>False</UseRequestRetry>
+    <RetryCount>0</RetryCount>
+    <RetryWaitTime>0</RetryWaitTime>
+    <RetryConditionType>0</RetryConditionType>
+    <RetryConditionValue />
+    <RequestRetryWithProxy>False</RequestRetryWithProxy>
+  </AntiSpiderRule>
+  <StopPagingNoRecordNum>5</StopPagingNoRecordNum>
+  <RunCommandsAtSplit>False</RunCommandsAtSplit>
+  <StartUrls>
+    <Url>http://sese.sysu.edu.cn/notice</Url>
+  </StartUrls>
+  <BrowserSetting>
+    <UserAgent />
+    <DisablePrompt>True</DisablePrompt>
+    <DisableImg>False</DisableImg>
+    <DisableJS>False</DisableJS>
+    <DisableFlash>False</DisableFlash>
+    <AdBlock>True</AdBlock>
+    <ProxyPort>8888</ProxyPort>
+    <ProxyHost />
+  </BrowserSetting>
+  <Pages>
+    <Page>
+      <RowXPath>//*[@id="content"]/article/div/div/div[2]/div[2]/div/div/div/div/div[2]/div/div[1]/ul/li</RowXPath>
+      <NoScript>False</NoScript>
+      <EngineMode>1</EngineMode>
+      <RowMode>1</RowMode>
+      <TestUrl>http://sese.sysu.edu.cn/notice</TestUrl>
+      <PaginationMode>0</PaginationMode>
+      <PaginationMaxNum>0</PaginationMaxNum>
+      <PaginationXPath />
+      <Fields>
+        <Field>
+          <Name>TITLE</Name>
+          <DefaultValue />
+          <Attribute>Text</Attribute>
+          <DefineValue />
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>True</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>True</NoEmpty>
+          <XPath>./div/span/a/p</XPath>
+        </Field>
+        <Field>
+          <Name>ORIGINAL_LINK</Name>
+          <DefaultValue />
+          <Attribute>href</Attribute>
+          <DefineValue />
+          <DeepIn>True</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+          <XPath>./div/span/a</XPath>
+        </Field>
+        <Field>
+          <Name>RELEASE_DATETIME</Name>
+          <DefaultValue />
+          <Attribute>Text</Attribute>
+          <DefineValue />
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+          <XPath>./div/span/a/span</XPath>
+        </Field>
+        <Field>
+          <Name>ADD_TIME</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>#当前时间#</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SUBJECT_TYPE</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>22fe7d2225b64386a4c7578b752d8bd7</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SOURCE</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>中山大学环境科学与工程学院</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SOURCE_REAL</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>中山大学环境科学与工程学院</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SOURCE_MENU_LV1</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>环境科学与工程</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>SOURCE_MENU_LV2</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>通知公告</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+        <Field>
+          <Name>BZY_SCRIPT_VERSION</Name>
+          <DefaultValue />
+          <Attribute>InnerText</Attribute>
+          <DefineValue>中山大学环境科学与工程学院_通知公告_v1.1</DefineValue>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+        </Field>
+      </Fields>
+    </Page>
+    <Page>
+      <RowXPath />
+      <NoScript>False</NoScript>
+      <EngineMode>1</EngineMode>
+      <RowMode>0</RowMode>
+      <TestUrl>http://sese.sysu.edu.cn/article/4841</TestUrl>
+      <TestUrl>http://sese.sysu.edu.cn/article/4833</TestUrl>
+      <TestUrl>http://sese.sysu.edu.cn/article/4819</TestUrl>
+      <TestUrl>http://sese.sysu.edu.cn/article/4795</TestUrl>
+      <TestUrl>http://sese.sysu.edu.cn/article/4790</TestUrl>
+      <PaginationMode>0</PaginationMode>
+      <PaginationMaxNum>0</PaginationMaxNum>
+      <PaginationXPath />
+      <Fields>
+        <Field>
+          <Name>CONTENT</Name>
+          <DefaultValue />
+          <Attribute>InnerHTML</Attribute>
+          <DefineValue />
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+          <XPath>//*[@id="content"]/article/div/div/div[2]/div[2]/div/div[2]</XPath>
+        </Field>
+        <Field>
+          <Name>NEWS_PICTURES</Name>
+          <DefaultValue />
+          <Attribute>InnerHTML</Attribute>
+          <DefineValue />
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <NoEmpty>False</NoEmpty>
+          <XPath>//*[@id="content"]/article/div/div/div[2]/div[2]/div/div[2]</XPath>
+          <ProcessList>
+            <Match Name="正则匹配">
+              <Pattern>((http:|https:).*?(jpg|gif|png|bmp))</Pattern>
+              <CheckContent>False</CheckContent>
+              <Multiline>True</Multiline>
+              <Delimiter>;</Delimiter>
+            </Match>
+          </ProcessList>
+        </Field>
+      </Fields>
+    </Page>
+  </Pages>
+</Root>

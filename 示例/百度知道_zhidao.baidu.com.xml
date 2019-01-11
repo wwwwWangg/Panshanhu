@@ -1,0 +1,91 @@
+<Root>
+  <NeedLogin>False</NeedLogin>
+  <MaxThreadNum>3</MaxThreadNum>
+  <StartUrls>
+    <Url>https://zhidao.baidu.com/search?lm=0&amp;rn=10&amp;pn=0&amp;fr=search&amp;ie=gbk&amp;word=%C5%C0%C9%BD%BB%A2</Url>
+  </StartUrls>
+  <BrowserSetting>
+    <DisablePrompt>True</DisablePrompt>
+    <DisableImg>True</DisableImg>
+    <DisableJS>False</DisableJS>
+    <DisableFlash>False</DisableFlash>
+    <AdBlock>True</AdBlock>
+    <ProxyPort>8088</ProxyPort>
+  </BrowserSetting>
+  <Pages>
+    <Page>
+      <RowXPath>//div[@class='list']/dl[contains(concat(' ',normalize-space(@class),' '),' dl ')]</RowXPath>
+      <NoScript>False</NoScript>
+      <EngineMode>0</EngineMode>
+      <RowMode>1</RowMode>
+      <TestUrl>https://zhidao.baidu.com/search?word=%B4%F3%CA%FD%BE%DD&amp;ie=gbk&amp;site=-1&amp;sites=0&amp;date=0</TestUrl>
+      <TestUrl>https://zhidao.baidu.com/search?word=c#&amp;ie=gbk&amp;site=-1&amp;sites=0&amp;date=0</TestUrl>
+      <TestUrl>https://zhidao.baidu.com/search?word=.net&amp;ie=gbk&amp;site=-1&amp;sites=0&amp;date=0</TestUrl>
+      <TestUrl>https://zhidao.baidu.com/search?lm=0&amp;rn=10&amp;pn=0&amp;fr=search&amp;ie=gbk&amp;word=%C5%C0%C9%BD%BB%A2</TestUrl>
+      <PaginationMode>1</PaginationMode>
+      <PaginationMaxNum>-1</PaginationMaxNum>
+      <Fields>
+        <Field>
+          <Name>title</Name>
+          <Attribute>InnerText</Attribute>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <XPath>./dt[1]/a[1]</XPath>
+          <XPath>.//a[@class='ti']</XPath>
+        </Field>
+        <Field>
+          <Name>title_Link</Name>
+          <Attribute>href</Attribute>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <XPath>./dt[1]/a[1]</XPath>
+          <XPath>.//a[@class='ti']</XPath>
+        </Field>
+        <Field>
+          <Name>answer</Name>
+          <Attribute>InnerText</Attribute>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <XPath>./dd[1]</XPath>
+          <XPath>.//dd[@class='dd answer']</XPath>
+        </Field>
+        <Field>
+          <Name>time</Name>
+          <Attribute>Text</Attribute>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <XPath>./dd[@class='dd explain f-light']/span[1]</XPath>
+        </Field>
+        <Field>
+          <Name>回答者</Name>
+          <Attribute>Text</Attribute>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <XPath>./dd[@class='dd explain f-light']/span[2]/a[1]</XPath>
+        </Field>
+        <Field>
+          <Name>f_light</Name>
+          <Attribute>Text</Attribute>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <XPath>./dd[@class='dd explain f-light']/span[3]/a[1]</XPath>
+        </Field>
+        <Field>
+          <Name>ml_10</Name>
+          <Attribute>Text</Attribute>
+          <DeepIn>False</DeepIn>
+          <UniqueIndex>False</UniqueIndex>
+          <Required>False</Required>
+          <XPath>./dd[2]/span[4]</XPath>
+          <XPath>.//span[@class='ml-10 f-black']</XPath>
+        </Field>
+      </Fields>
+    </Page>
+  </Pages>
+</Root>
